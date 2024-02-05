@@ -5,8 +5,10 @@ export default {
     BACKGROUND: {
       900: '#1C1B1E',
       800: '#262529',
+      700: '#312E38',
     },
     BRAND: '#FF859B',
+    BRAND_5: '#FF859B11',
     GRAY: '#CAC4CF',
     ZINC: '#948F99',
     WHITE: '#FFF',
