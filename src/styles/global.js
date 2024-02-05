@@ -11,6 +11,10 @@ export default createGlobalStyle`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND[900]};
   }
 
+  #root{
+    width:100%;
+  }
+
   body, input, button, textarea {
     display: flex;
     font-family: 'Roboto Slab', serif;
