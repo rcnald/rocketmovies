@@ -1,8 +1,8 @@
-import { Button } from '../../components/Button'
+import { Button, ButtonIcon } from '../../components/Button'
 import { Input, InputIcon } from '../../components/Input'
 import { Container, Form, Image } from './styles'
 
-import { LuLock, LuMail, LuUser } from 'react-icons/lu'
+import { LuArrowBigLeft, LuLock, LuMail, LuUser } from 'react-icons/lu'
 
 export function Sign({ children }) {
   return (
@@ -57,7 +57,10 @@ export function SignUp() {
         </Input>
         <div>
           <Button>Cadastrar</Button>
-          <Button isTransparent>Voltar para o login</Button>
+          <Button isTransparent>
+            <ButtonIcon icon={LuArrowBigLeft} />
+            Voltar para o login
+          </Button>
         </div>
       </div>
     </>

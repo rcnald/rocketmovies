@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
   display: flex;
+  align-items: center;
+  gap: 8px;
   background-color: ${(props) =>
     props.$isTransparent ? 'transparent' : props.theme.COLORS.BRAND};
   padding-block: 16px;
