@@ -1,11 +1,11 @@
 import { Label } from './styles'
 
-export function Input({ placeholder, id, type, children }) {
+export function Input({ placeholder, id, children, ...props }) {
   return (
     <Label htmlFor={id}>
       <span>{placeholder}</span>
       {children}
-      <input type={type} id={id} placeholder={placeholder} />
+      <input {...props} id={id} placeholder={placeholder} />
     </Label>
   )
 }
