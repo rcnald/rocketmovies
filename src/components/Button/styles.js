@@ -6,7 +6,7 @@ export const Button = styled.button`
   gap: 8px;
   background-color: ${(props) =>
     props.$isTransparent ? 'transparent' : props.theme.COLORS.BRAND};
-  padding-block: 16px;
+  padding: 16px;
   border-radius: 10px;
   border: none;
   width: 100%;

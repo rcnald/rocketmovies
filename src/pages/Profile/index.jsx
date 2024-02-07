@@ -7,15 +7,17 @@ import {
 } from 'react-icons/lu'
 import { Button, ButtonIcon } from '../../components/Button'
 import { Input, InputIcon } from '../../components/Input'
-import { Main } from './styles'
+import { Container, Main } from './styles'
 
 export function Profile() {
   return (
     <Main>
-      <Button isTransparent>
-        <ButtonIcon icon={LuArrowBigLeft} />
-        Voltar
-      </Button>
+      <Container>
+        <Button isTransparent>
+          <ButtonIcon icon={LuArrowBigLeft} />
+          Voltar
+        </Button>
+      </Container>
       <form action="">
         <div>
           <img src="https://github.com/rcnald.png" alt="foto" />

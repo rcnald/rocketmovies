@@ -12,6 +12,7 @@ export default {
     GRAY: '#CAC4CF',
     ZINC: '#948F99',
     WHITE: '#FFF',
+    BLACK: '#000',
   },
   UTILS: {
     SRONLY: css`
@@ -24,6 +25,11 @@ export default {
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border-width: 0;
+    `,
+    CONTAINER: css`
+      max-width: 1120px;
+      width: 100%;
+      margin-inline: auto;
     `,
   },
 }

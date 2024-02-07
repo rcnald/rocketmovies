@@ -6,7 +6,7 @@ export const Marker = styled.button`
   gap: 8px;
   background-color: ${(props) =>
     props.$isTransparent ? 'transparent' : props.theme.COLORS.BACKGROUND[700]};
-  padding-block: 16px;
+  padding: 16px;
   border-radius: 10px;
   border: none;
   width: 100%;
