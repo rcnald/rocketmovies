@@ -4,4 +4,7 @@
  	  "source.addMissingImports": "explicit",
   	"source.organizeImports": "explicit"
   },
+  "cSpell.words": [
+    "rocketmovies"
+  ],
 }

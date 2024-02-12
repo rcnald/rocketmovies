@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
+import { AuthProvider } from './context/auth.jsx'
+import { mountProviders } from './lib/utils.jsx'
 import { Routes } from './routes'
 import GlobalStyles from './styles/global'
 import theme from './styles/theme'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
+const providers = [[ThemeProvider, { theme }], [AuthProvider]]
+
+const AppProviders = mountProviders(providers)({
+  children: (
+    <>
       <GlobalStyles />
       <Routes />
-    </ThemeProvider>
-  </React.StrictMode>,
+    </>
+  ),
+})
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>{AppProviders}</React.StrictMode>,
 )

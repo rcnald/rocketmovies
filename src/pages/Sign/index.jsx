@@ -3,6 +3,7 @@ import { LuArrowBigLeft, LuLock, LuMail, LuUser } from 'react-icons/lu'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, ButtonIcon } from '../../components/Button'
 import { Input, InputIcon } from '../../components/Input'
+import { useAuth } from '../../hooks/useAuth'
 import { api } from '../../services/api'
 import { Container, Form, Image } from './styles'
 
@@ -22,6 +23,7 @@ export function Sign({ children }) {
 }
 
 export function SignIn() {
+  const { signIn } = useAuth()
   const [userData, setUserData] = useState({
     email: '',
     password: '',
@@ -36,6 +38,7 @@ export function SignIn() {
     if (!userData.email || !userData.password) {
       return alert('campos não podem estar vazios!')
     }
+    signIn({ email: userData.email, password: userData.password })
   }
 
   return (
@@ -73,13 +76,12 @@ export function SignIn() {
 }
 
 export function SignUp() {
+  const navigate = useNavigate()
   const [userData, setUserData] = useState({
     name: '',
     email: '',
     password: '',
   })
-
-  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target

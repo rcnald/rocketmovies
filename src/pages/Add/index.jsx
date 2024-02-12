@@ -47,13 +47,3 @@ export function Add() {
     </>
   )
 }
-
-export const composeProviders = (providers) => {
-  return ({ children }) =>
-    providers.reduceRight(
-      (child, [Provider, props = {}]) => (
-        <Provider {...props}>{child} </Provider>
-      ),
-      children,
-    )
-}
