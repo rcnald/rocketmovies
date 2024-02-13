@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Marker = styled.button`
+export const Marker = styled.label`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -22,5 +22,17 @@ export const Marker = styled.button`
 
   > * {
     color: ${(props) => props.theme.COLORS.BRAND};
+  }
+
+  span {
+    ${({ theme }) => theme.UTILS.SRONLY}
+  }
+
+  input {
+    display: ${(props) => (props.$isTransparent ? 'flex' : 'none')};
+    background: transparent;
+    border: none;
+    color: ${(props) =>
+      props.$isTransparent ? props.theme.COLORS.GRAY : 'white'};
   }
 `

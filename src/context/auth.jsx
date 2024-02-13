@@ -34,7 +34,6 @@ export function AuthProvider({ children }) {
 
         const response = await api.patch('/users/avatar', fileForm)
         user.avatar = response.data.avatar
-        console.log(user.avatar)
       }
 
       const response = await api.put('/users', user)
