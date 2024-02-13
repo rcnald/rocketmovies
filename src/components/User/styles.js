@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const User = styled.div`
+export const User = styled(Link)`
   display: flex;
   gap: 8px;
 

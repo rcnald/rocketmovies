@@ -18,6 +18,8 @@ export const Main = styled.main`
 
   img {
     width: 186px;
+    height: 186px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
   }
 
@@ -27,7 +29,7 @@ export const Main = styled.main`
     margin-bottom: 64px;
   }
 
-  img + button {
+  img + label {
     width: fit-content;
     border-radius: 50%;
     padding: 14px;

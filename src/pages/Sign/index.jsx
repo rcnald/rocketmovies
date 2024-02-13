@@ -30,8 +30,8 @@ export function SignIn() {
   })
 
   const handleChange = (e) => {
-    const { type, value } = e.target
-    setUserData((prev) => ({ ...prev, [type]: value }))
+    const { id, value } = e.target
+    setUserData((prev) => ({ ...prev, [id]: value }))
   }
 
   const handleClick = () => {
@@ -57,7 +57,7 @@ export function SignIn() {
         </Input>
         <Input
           placeholder="Senha"
-          id="senha"
+          id="password"
           type="password"
           value={userData.password}
           onChange={handleChange}
@@ -84,8 +84,8 @@ export function SignUp() {
   })
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setUserData((prev) => ({ ...prev, [name]: value }))
+    const { id, value } = e.target
+    setUserData((prev) => ({ ...prev, [id]: value }))
   }
 
   const handleClick = () => {
@@ -118,9 +118,8 @@ export function SignUp() {
       <div>
         <Input
           placeholder="Nome"
-          id="nome"
+          id="name"
           type="text"
-          name="name"
           value={userData.name}
           onChange={handleChange}
         >
@@ -130,7 +129,6 @@ export function SignUp() {
           placeholder="E-mail"
           id="email"
           type="email"
-          name="email"
           value={userData.email}
           onChange={handleChange}
         >
@@ -138,9 +136,8 @@ export function SignUp() {
         </Input>
         <Input
           placeholder="Senha"
-          id="senha"
+          id="password"
           type="password"
-          name="password"
           value={userData.password}
           onChange={handleChange}
         >

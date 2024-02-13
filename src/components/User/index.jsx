@@ -1,16 +1,32 @@
+import { useNavigate } from 'react-router-dom'
+import avatarPlaceHolder from '../../assets/avatar_placeholder.svg'
 import { useAuth } from '../../hooks/useAuth'
+import { api } from '../../services/api'
 import { User as UserStyle } from './styles'
 
 export function User() {
-  const { signOut } = useAuth()
+  const navigate = useNavigate()
+  const { signOut, user } = useAuth()
+
+  async function handleClick() {
+    await signOut()
+    navigate('/')
+  }
   return (
-    <UserStyle>
+    <UserStyle to="/profile">
       <div>
-        <span>Ronaldo Junior</span>
-        <button onClick={signOut}>sair</button>
+        <span>{user.name}</span>
+        <button onClick={handleClick}>sair</button>
       </div>
       <button>
-        <img src="https://github.com/rcnald.png" alt="foto" />
+        <img
+          src={
+            user.avatar
+              ? `${api.defaults.baseURL}/files/${user.avatar}`
+              : avatarPlaceHolder
+          }
+          alt={user.name}
+        />
       </button>
     </UserStyle>
   )
