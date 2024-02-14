@@ -1,4 +1,4 @@
-import { createContext, useEffect } from 'react'
+import { createContext, useLayoutEffect } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage.jsx'
 import { api } from '../services/api'
 
@@ -64,7 +64,7 @@ export function AuthProvider({ children }) {
     removeData()
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     api.defaults.headers.common.Authorization = `Bearer ${data?.token}`
   }, [data])
 

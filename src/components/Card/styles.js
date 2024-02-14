@@ -12,6 +12,11 @@ export const Article = styled.article`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
+  > ul {
+    display: flex;
+    gap: 10px;
+  }
+
   > div {
     gap: 8px;
     display: flex;

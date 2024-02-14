@@ -31,7 +31,6 @@ export const Container = styled.div`
   ${({ theme }) => theme.UTILS.CONTAINER};
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding-block: 30px;
   gap: 64px;
 `

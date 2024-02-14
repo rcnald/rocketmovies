@@ -7,7 +7,7 @@ import { Routes } from './routes'
 import GlobalStyles from './styles/global'
 import theme from './styles/theme'
 
-const providers = [[ThemeProvider, { theme }], [AuthProvider]]
+const providers = [[AuthProvider], [ThemeProvider, { theme }]]
 
 const AppProviders = mountProviders(providers)({
   children: (
