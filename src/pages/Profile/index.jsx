@@ -21,13 +21,15 @@ export function Profile() {
     email: user.email,
     password: '',
     current_password: '',
+    avatar: user.avatar,
   })
+
   const [avatar, setAvatar] = useState(
     user.avatar
       ? `${api.defaults.baseURL}/files/${user.avatar}`
       : avatarPlaceHolder,
   )
-  const [avatarFile, setAvatarFile] = useState(null)
+  const [avatarFile, setAvatarFile] = useState()
 
   const handleChange = (e) => {
     const { id, value } = e.target
