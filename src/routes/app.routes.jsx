@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 import { Add } from '../pages/Add'
 import { Home } from '../pages/Home'
@@ -12,6 +12,7 @@ export function AppRoutes() {
       <Route path="/note/:id" element={<Note />} />
       <Route path="/add" element={<Add />} />
       <Route path="/" element={<Home />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   )
 }

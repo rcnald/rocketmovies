@@ -1,8 +1,9 @@
-import { Route, Routes } from 'react-router-dom'
-
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 import { Sign, SignIn, SignUp } from '../pages/Sign'
 
 export function AuthRoutes() {
+  const [data] = useLocalStorage('@rocketmovies:data', {})
   return (
     <Routes>
       <Route
@@ -21,6 +22,7 @@ export function AuthRoutes() {
           </Sign>
         }
       />
+      {data.user ? <Route path="*" element={<Navigate to="/" />} /> : null}
     </Routes>
   )
 }
