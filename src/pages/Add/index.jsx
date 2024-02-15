@@ -60,7 +60,7 @@ export function Add() {
     <>
       <Header />
       <Container>
-        <Button style={'width:fit-content;'} isTransparent>
+        <Button onClick={() => navigate(history.back())} isTransparent>
           <ButtonIcon icon={LuArrowBigLeft} />
           Voltar
         </Button>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { LuPlus } from 'react-icons/lu'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { api } from '../../services/api'
 import { Button, ButtonIcon } from '../Button'
 import { Card } from '../Card'
@@ -8,6 +8,11 @@ import { Container, Movies as MoviesStyle } from './styles'
 
 export function Movies({ search }) {
   const [notes, setNotes] = useState([])
+  const navigate = useNavigate()
+
+  const handleClick = (id) => {
+    navigate(`/note/${id}`)
+  }
 
   useEffect(() => {
     const controller = new AbortController()
@@ -52,6 +57,7 @@ export function Movies({ search }) {
                 rating={note.rating}
                 tags={note.tags}
                 key={note.id}
+                onClick={() => handleClick(note.id)}
               />
             )
           })}
