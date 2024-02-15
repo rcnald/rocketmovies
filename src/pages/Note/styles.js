@@ -18,7 +18,13 @@ export const Section = styled.section`
 
   img {
     width: 16px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
+  }
+
+  ul {
+    display: flex;
+    gap: 10px;
   }
 
   span {

@@ -26,6 +26,7 @@ export const User = styled(Link)`
 
   img {
     width: 64px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
   }
 `
